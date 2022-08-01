@@ -1,0 +1,1084 @@
+
+
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+        .font-family{
+            font-family: 'Lora', serif;
+        }
+
+        body{
+            background-image: url(img/背景圖1.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+        }
+        /* color */
+        .brown-0{
+            color: #C7802D;
+        }
+        .brown-1{
+            color: #AC9A7F;
+        }
+        .brown-2{
+            color: #978463;
+        }
+        .brown-3{
+            color: #503916;
+        }
+        .brown-4{
+            color: #3F3019;
+        }
+        .green-3{
+            color: #727C3D;
+        }
+        .light-color{
+            color: #FCF7F1;
+        }
+        .dark-color{
+            color: #a55428;
+        }
+    /* ----------------nav ------------------*/
+
+        @media screen and (min-width:376px) {
+            
+        }
+        #navbar{
+            width: 100%;
+            background-color: #ffffff;
+            position: fixed;
+            z-index: 999999;
+            top: 0%;
+            transition: 1s;
+        }
+        .hidden{
+            transform: translateY(-100px);
+        }
+        .scroll{
+            width: 100%;
+            height: 5px;
+            background-color: #9f6d3354;
+            position: fixed;
+            top:0;
+            z-index: 999999999;
+        }
+        .scroll-box{
+            width: 0%;
+            height: 100%;
+            background-color: #C7802D;
+        }
+        .media-nav{
+            width: 100%;
+            background-color: #ffffff;
+            position: fixed;
+            z-index: 999999;
+            top: 0%;
+        }
+    /* -----------------header-------------------- */
+        .carousel-indicators li {
+            width: 19.83px;
+            height: 10.18px;
+            border-radius: 10px;
+            border: 1px solid #AC9A7F;
+            background-color: #AC9A7F;
+            margin: 0 10px;
+
+        }
+
+        .media-header-img{
+            width:100%;
+            height: 286px;
+            background-image: url(img/img-1-iphone.png);
+            background-repeat: no-repeat;
+            background-position: center;        
+        }
+
+        .media-header{
+            margin-top: 40%;
+        }
+    /*--------- main About-seaction------------ */
+        #About{
+            transform: translateY(100px);
+            opacity:0 ;
+            transition: 2s;
+
+        }
+        .main-bg{
+            width: 100%;
+            background-color: hsla(44, 50%, 58%, 0.158);
+            box-shadow: 5px 5px 5px 5px #a7a88d37;
+            /* transform: translatey(100px); */
+            /* transition: 3s; */
+        }
+        @media screen and (min-width:376px) {
+            .main-bg{
+                margin-top: 300px;
+                height:550px;
+                padding-top: 5rem;
+            }
+        }
+
+        .carousel-inner {
+            top: 150px;
+        }
+        .carousel-indicators{
+            top: 700px;
+        }
+        .about-img{
+            width: 60%;
+            min-height:560px;
+            background-image: url(img/2.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            object-fit: cover;
+        }
+
+        .media-about-img{
+            width: 100%;
+            height: 240px;
+            background-image: url(img/img-2-iphone.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .about-taiwantea-iphone-title-img{
+            width: 100%;
+            height: 54px;
+            margin:18px 0;
+            background-image: url(img/about\ taiwan\ tea\ iphone-title.png);
+            background-position:center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    /* ---------history-sectiion ---------------*/
+        
+        @media screen and (min-width:376px){
+            .history{
+                margin-top: 20%;
+                /* transform: translate(200px); */
+                opacity: 0;
+                transition: 3s;
+            }
+        }
+
+        @media screen and (max-width:376px){
+            .history{
+                margin-top: 20%;
+                /* transform: translate(200px); */
+                opacity: 0;
+                transition: 2s;
+            }
+        }
+        .history-title-img{
+            width: 100%;
+            height: 220px;
+            background-image: url(img/3.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            object-fit: cover;
+        }
+        .media-history-title-img{
+            width: 100%;
+            height: 240px;
+            background-image: url(img/img-3-iphone.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            object-fit: cover;
+        }
+        
+        .leafWrap{
+            width: 150px;
+            position: absolute;
+            left: 10%;
+            bottom: 10%;
+            animation: leftleafmove 1.3s infinite alternate;
+        }
+        
+        @keyframes leftleafmove {
+            0% {
+                transform:  translatey(0);
+                
+            }
+
+            100% {
+                transform: translatey(30px);
+                
+            }
+        }
+        
+        .rightWrap{
+            width: 200px;
+            position: absolute;
+            left: 80%;
+            bottom: 30%;
+            animation: rightleafmove 2s infinite alternate;
+        }
+
+        @keyframes rightleafmove {
+            0% {
+                transform: translatey(0);
+                
+            }
+
+            100% {
+                transform: translatey(40px);
+                
+            }
+        }
+
+        /* ----------manufacture section--------- */
+        .manufacture-info{
+            margin: 7% 0 0 0;
+            width: 100%;
+            height: 1300px;
+            background-image: url(img/background3.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+        .manufacture-title{
+            transform: translateY(100px);
+            transition: 2s;
+            opacity: 0;
+        }
+        .manufacture-title-img{
+            width: 100%;
+            height: 220px;
+            background-image: url(img/4.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            object-fit: cover;
+        }
+        .media-manufacture-title-img{
+            width: 100%;
+            height: 167px;
+            background-image: url(img/img-4-iphone.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            object-fit: cover;
+        }
+        .container-fluid{
+            margin-top: 90px;
+            width: 95%;
+        }
+
+        .wrap{
+            width: 220px;
+            height:220px ;
+            border-radius: 50%;
+            overflow: hidden;
+            filter:drop-shadow(2px 2px 7px #503916);
+        }
+        .img-card-div{
+            width: 180px;
+            height: 180px;
+        }
+        .img-card{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* .card-text{
+            width: 100%;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        } */
+
+        .card-bottom-seaction{
+            margin-top: 60px;
+        }
+        
+        /* .card-top-seaction{
+            transform: translatex(30px);
+            transition: 3s;
+            opacity: 0;
+        } */
+
+        .manufacture-card-1{
+            transform: translatex(30px);
+            transition: 1s;
+            opacity: 0;
+            
+        }
+
+        .manufacture-card-2{
+            transform: translatex(30px);
+            transition: 1.5s;
+            opacity: 0;
+            
+        }
+        .manufacture-card-3{
+            transform: translatex(30px);
+            transition: 2s;
+            opacity: 0;
+            
+        }
+        .manufacture-card-4{
+            transform: translatex(30px);
+            transition: 2.5s;
+            opacity: 0;
+            
+        }
+        .manufacture-card-5{
+            transform: translatex(30px);
+            transition: 3s;
+            opacity: 0;
+            
+        }
+        .manufacture-card-6{
+            transform: translatex(30px);
+            transition: 3.5s;
+            opacity: 0;
+            
+        }
+        .manufacture-card-7{
+            transform: translatex(30px);
+            transition: 4s;
+            opacity: 0;
+            
+        }
+        .manufacture-card-8{
+            transform: translatex(30px);
+            transition: 4.5s;
+            opacity:0 ;
+            
+        }
+
+        /* @keyframes delay {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        } */
+
+/* ---media manufacture--------- */
+    .media-manufacture-img{
+        width: 100%;
+        height: 165px;
+        background-image: url(img/img-4-iphone.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        object-fit: cover;
+    }
+    .media-manufacture-title {
+        transform: translateY(10px);
+        opacity: 0;
+        transition: 3s;
+    }
+    .scroll-snap {
+        /* border: 1px solid #000; */
+        padding-top: 60px;
+        margin: 0 15px ;
+        display:flex;
+        overflow-x: auto;
+        scroll-padding:0 50%;
+        scroll-snap-type: x mandatory;
+        
+        /* scroll-snap-type: 容器裡的吸附方向 mandatory　強制吸附x軸
+        proximity 是預設值 */
+        
+    }
+    .media-manufacture-card1{
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+        /* scroll-snap-align: 滾動捕獲的對齊位置 */
+        display: inline-block;
+        
+    }
+    /* ::-webkit-scrollbar{
+        display: none;
+    } */
+    .media-manufacture-card {
+        min-height: 400px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    .media-manufacture-card-img{
+        width: 230px;
+        height: 230px;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        background-image: url(img/card1.jpg);
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    .media-manufacture-card2-img{
+        width: 230px;
+        height: 230px;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        background-image: url(img/card2.jpg);
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    .media-manufacture-card3-img{
+        width: 230px;
+        height: 230px;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        background-image: url(img/card3.jpg);
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    .media-manufacture-card4-img{
+        width: 230px;
+        height: 230px;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        background-image: url(img/card4.jpg);
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    .media-manufacture-card5-img{
+        width: 230px;
+        height: 230px;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        background-image: url(img/card5.jpg);
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    .media-manufacture-card6-img{
+        width: 230px;
+        height: 230px;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        background-image: url(img/card6.jfif);
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    .media-manufacture-card7-img{
+        width: 230px;
+        height: 230px;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        background-image: url(img/card7.jpg);
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    .media-manufacture-card8-img{
+        width: 230px;
+        height: 230px;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        background-image: url(img/card8.jpg);
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+        overflow: hidden;
+    }
+
+    /*-------------tea presentation -----------------*/
+
+    .tcard-seaction{
+        min-height: 48vh;
+        position: relative;
+        display: flex;
+        padding-bottom: 13rem;
+        justify-content: center;
+        /* flex-direction: column; */
+    }
+    .tea-card{
+        margin: 0 10px;
+        position: relative;
+        width: 330px;
+        height: 311px;   
+        /* border: 1px solid #000; */
+        
+    }
+    .cardface {
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: 1s;
+    }
+    .face1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        transform-origin:bottom;
+    }
+    .face1-name{
+        background-color: #978463;
+        height: 40px;
+        padding: 5px 0 0 0  ;
+    }
+    .tea-card-img{
+        max-width: 330;
+    }
+    .face1-name{
+        margin: 10px 0 0;
+        color: #3F3019;
+        text-align: center;
+
+    }
+    .tcard-seaction .tea-card:hover .face1{
+        transform: translateY(-100%) rotateX(90deg) ;
+    } 
+    .face2{
+        background-color: #AC9A7F;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform-origin: top;
+        transform: translateY(100%) rotateX(90deg);
+    }
+    .tcard-seaction .tea-card:hover .face2{
+        transform: translateY(0%) rotateX(0deg) translateZ(100px);
+    }
+    /* -----media tea presentation------ */
+    .media-tea-presentation{
+        overflow: hidden;
+        min-height: 330vh;
+        margin-top: 50px;
+        width: 100%;
+        position: relative;
+        
+        /* background: url(img/毛玻璃背景3.png)center center / 100% no-repeat;
+        
+        /* background: linear-gradient(#fbcc97, #A7A88D); */
+        }
+        .circle{
+            width: 100%;
+            min-height: 330vh;
+            background-color: #d9df1900;
+            position: absolute;
+            background-attachment: fixed;
+        }
+        .c-1{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            transform: translate(18rem, 3rem);
+            background: linear-gradient(rgb(251, 204, 151), #A7A88D);
+            filter: blur(10px);
+            background-attachment: fixed;
+            animation: c-1move 2s infinite alternate;
+        }
+        @keyframes c-1move {
+            0% {
+                transform:translate(18rem, 3rem);
+                
+            }
+
+            100% {
+                transform: translate(15rem, 0rem);
+                
+            }
+        }
+        .c-2{
+            position: absolute;
+            width: 650px;
+            height: 650px;
+            border-radius: 50%;
+            transform: translate(-2rem, 25rem);
+            background: linear-gradient(rgba(138, 168, 142, 0.479), #c6baa3b0);
+            filter: blur(5px);
+            background-attachment: fixed;
+            animation: c-2move 3s infinite alternate;
+        }
+        @keyframes c-2move {
+            0% {
+                transform: translate(-2rem, 25rem) ;
+                
+            }
+
+            100% {
+                transform:translate(1rem, 20rem) ;
+                
+            }
+        }
+        .c-3{
+            position: absolute;
+            width: 600px;
+            height: 650px;
+            border-radius: 50%;
+            transform: translate(6rem, 55rem);
+            background: linear-gradient(rgba(155, 124, 78, 0.418), rgba(73, 120, 98, 0.207));
+            filter: blur(40px);
+            background-attachment: fixed;
+            animation: c-3move 3s infinite alternate;
+        }
+        @keyframes c-3move {
+            0% {
+                transform: translate(6rem, 55rem) ;
+                
+            }
+
+            100% {
+                transform:translate(1rem, 45rem)  ;
+                
+            }
+        }
+        .c-4{
+            position: absolute;
+            width: 530px;
+            height: 530px;
+            border-radius: 50%;
+            transform: translate(0rem, 80rem);
+            background: linear-gradient(hsla(35, 41%, 73%, 0.667), rgba(135, 145, 114, 0.473));
+            filter: blur(30px);
+            background-attachment: fixed;
+            animation: c-4move 2s infinite alternate;
+        }
+        @keyframes c-4move {
+            0% {
+                transform: translate(0rem, 80rem) ;
+                
+            }
+
+            100% {
+                transform:translate(2rem, 70rem)  ;
+                
+            }
+        }
+        .c-5{
+            position: absolute;
+            width: 350px;
+            height: 400px;
+            border-radius: 50%;
+            transform: translate(-6rem, 111rem);
+            background: linear-gradient(hsla(12, 41%, 73%, 0.49), rgba(179, 115, 4, 0.429));
+            filter: blur(40px);
+            background-attachment: fixed;
+            animation: c-5move 3s infinite alternate;
+        }
+        @keyframes c-5move {
+            0% {
+                transform: translate(-6rem, 111rem) ;
+                
+            }
+
+            100% {
+                transform:translate(-2rem, 100rem)  ;
+                
+            }
+        }
+        .c-6{
+            position: absolute;
+            width: 300px;
+            height: 400px;
+            border-radius: 50%;
+            transform: translate(0rem , 0rem);
+            background: linear-gradient(hsla(12, 41%, 73%, 0.478), rgba(196, 126, 6, 0.422));
+            filter: blur(30px);
+            background-attachment: fixed;
+            animation: c-6move 2s infinite alternate;
+        }
+        @keyframes c-6move {
+            0% {
+                transform: translate( 0rem, 0rem) ;
+                
+            }
+
+            100% {
+                transform:translate(3rem, 3rem)  ;
+                
+            }
+        }
+        
+    .media-tea-presentation .container-fluid{
+        margin-top: 3rem;
+        }
+    .media-tea-presentation-img{
+        width: 100%;
+        height: 165px;
+        background-image: url(img/img-5-iphone.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        object-fit: cover;
+    }
+    .media-tea-presentation-img h4{
+        padding-top: 0;
+        transform: translateY(100%);
+    }
+    .md-tcard-seaction-card{
+        margin-top: 40px;
+        position: relative;
+        flex-direction: column;
+        width: 100%;
+        height: 450px;
+        border-radius: 30px;
+        background: rgba(225, 225, 225, 0.1);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(225, 225, 225, 0.5);
+        border-right: 1px solid (225, 225, 225, 0.2);
+        border-bottom: 1px solid (225, 225, 225, 0.2);
+        border-radius: 10px;
+        z-index: 10;
+        backdrop-filter: blur(10px);
+    }
+    .md-tcard-seaction-img-1 {
+        width: 100%;
+        height: 200px;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        background-image: url(img/東方美人2.jpg);
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    .md-tcard-seaction-img-2 {
+        width: 100%;
+        height: 200px;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        background-image: url(img/凍頂烏龍2.jpg);
+        background-size: cover;
+        background-position: 30 60;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    .md-tcard-seaction-img-3 {
+        width: 100%;
+        height: 200px;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        background-image: url(img/阿里山蜜香烏龍2.jpg);
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    .md-tcard-seaction-img-4 {
+        width: 100%;
+        height: 200px;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        background-image: url(img/日月潭紅玉紅茶2.jpg);
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    /* ------------ how to make ------ */
+    .hot-to-make-titleimg{
+        width: 100%;
+        height: 220px;
+        background-image: url(img/h-5.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        object-fit: cover;
+    }
+    .how-to-make{
+        margin-top: 40px;
+        min-height: 250vh;
+        /* background:linear-gradient(0deg,#d2bd9c89, #9c9d965a ); */
+    }
+    .how-to-make-title{
+        padding: 3rem 0;
+    }
+    .htm-seaction{
+        width: 100%;
+        /* position: relative; */
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .htm-seaction .container{
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap:wrap;
+        margin: 20px;
+        padding: 20px 0;
+        
+    }
+    .htm-img{
+        filter:drop-shadow(0px 0px 0px #50391600);
+        position: absolute;
+        /* height: calc(100% - 30px);
+        width: calc(100% -30px); */
+        z-index: 99;
+        transition: 1s;
+        /* transition-duration: 5s; */
+    }
+
+    .step{
+        opacity:1;
+        transition: 1s;
+    }
+    .htm-card:hover .step{
+        opacity:0;
+    }
+    .htm-img img{
+        /* transition: 3s; */
+        border-radius: 30px;
+        
+    }
+    .htm-img{
+        opacity: 1;
+    }
+    
+    .container .htm-card:hover .htm-img{
+        /* height: 400px;
+        width: 400px;
+        left: -200px; */
+        /* top: calc(50% - 200px); */
+        /* opacity: 0.9; */
+        transform: translate(-350px, -90px) scale(0.7);
+        transition: 2s;
+        opacity: 0.9;
+        filter:drop-shadow(2px 2px 7px #50391669);
+    }
+    .htm-card{
+        position: relative;
+        height: 550px;
+        width: 60%;
+
+    }
+    .htm-card .content{
+        border-radius: 30px;
+        width: 780px;
+        height: 330px;
+        position: absolute;
+        right: 0;
+        width: 100%;
+        /* min-height: 250px; */
+        background:linear-gradient(90deg,#c8b8a3d7, rgba(255, 255, 255, 0.033) );
+        /* filter:drop-shadow(1px 1px 3px #50391687); */
+        box-shadow:0px 0px 0px 0px #50391600 ;
+        position: absolute;
+        top: 0px;
+        transition: 2s;
+        /* left: 90px; */
+    }
+    .htm-card:hover .content{
+        box-shadow:1px 1px 9px 1px #6a5a4332 ;
+    }
+    .htm-card-info{
+        width: 100%;
+        min-height: 100px;
+        padding-left: 20%;
+        padding-top: 5%;
+        opacity: 0;
+        transition: 2.5s;
+        
+        /* padding: 90px 100px; */
+    }
+    .htm-card:hover .htm-card-info{
+        opacity: 1;
+        padding-left: 40%;
+        padding-top: 15%;
+    }
+    /* --media how to make -- */
+    .media-how-to-make{
+        min-height: 270vh;
+    }
+    .media-how-to-make-img{
+        width: 100%;
+        height: 165px;
+        background-image: url(img/h-8.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        object-fit: cover;
+        transition: 1s;
+        opacity: 0;
+    }
+    .media-how-to-make-img h4{
+        padding-top: 0;
+        transform: translateY(100%);
+    }
+    .md-htm-content{
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        /* min-height: 15rem; */
+        /* background:linear-gradient(hsla(35, 41%, 73%, 0.667), rgba(135, 145, 114, 0.473)); */
+        /* border: 1px solid #000; */
+    }
+    .md-htm-card-1{
+        transition: 2s;
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    .md-htm-card-img-1 {
+        width: 90%;
+        height: 200px;
+        /* border-radius: 50%; */
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        background-image: url(img/how-1.jpg);
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    .md-htm-card-2{
+        transition: 2s;
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    .md-htm-card-img-2{
+        width: 90%;
+        height: 200px;
+        /* border-radius: 50%; */
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        background-image: url(img/how-2.jpg);
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    .md-htm-card-3{
+        transition: 2s;
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    .md-htm-card-img-3{
+        width: 90%;
+        height: 200px;
+        /* border-radius: 50%; */
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        background-image: url(img/how-3.jpg);
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    .md-htm-card-4{
+        transition: 2s;
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    .md-htm-card-img-4{
+        width: 90%;
+        height: 200px;
+        /* border-radius: 50%; */
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        background-image: url(img/how-4.png);
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    /* footer */
+    .footer-img{
+        width: 100%;
+        height: 280px;
+        background-image: url(img/FOTTER3.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        object-fit: cover;
+    }
+    .footer-info {
+        width: 70%;
+        height: 300px;
+    }
+    .footer-p{
+        padding-top: 20px;
+        color: #ac9a7fb8;
+    }
+
+    /*  */
+    .md-footer-p{
+        padding-top: 10px;
+        color: #ac9a7fb8;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* -----------top icon---------------*/
+    .top{
+        background-color:#ffffff00;
+        width: 70px;
+        height: 70px;
+        position: fixed;
+        z-index: 99999;
+        right: 40px;
+        bottom: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    
