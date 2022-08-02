@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- navbar -->
     <nav id="navbar">
         <div class="scroll">
             <div class="scroll-box"></div>
@@ -111,7 +112,7 @@
     </nav>
     <!-- header -->
     <header>
-        <div class=" carouselExampleControls-header container d-none d-md-block">
+        <div class=" mt-5 carouselExampleControls-header container d-none d-md-block">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators" href="#carouselExampleControls" role="button" data-slide="next" data-slide="prev">
                     <li href="#carouselExampleControls"   data-target="#carouselExampleIndicators" data-slide-to="0"  aria-hidden="true" class="active" data-slide="next">
@@ -778,8 +779,8 @@
         </div>
     </div>
     <!-- how to make -->
-    <div id="nav-how-to-mack" class="how-to-make d-none d-md-block">
-        <div class="hot-to-make-titleimg">
+    <div  class="how-to-make d-none d-md-block">
+        <div id="nav-how-to-mack" class="hot-to-make-titleimg">
         
         </div>        
         <div class="how-to-make-title title mt-5">
@@ -788,7 +789,7 @@
             </h4>
         </div>
         <div class="htm-seaction container">
-            <div class="htm-card">
+            <div id="htm-card1-js" class="htm-card">
                 <div class="htm-img">
                     <img class="w-100" src="img/how-1.jpg" alt="">
                     <h6 class="step brown-3 pl-4 pt-1">
@@ -815,7 +816,7 @@
                     </div>
                 </div>
             </div>
-            <div class="htm-card">
+            <div id="htm-card2-js" class="htm-card">
                 <div class="htm-img">
                     <img class="w-100" src="img/how-2.jpg" alt="">
                     <h6 class="step pl-4 pt-1 brown-3 ">
@@ -842,7 +843,7 @@
                     </div>
                 </div>
             </div>
-            <div class="htm-card">
+            <div id="htm-card3-js" class="htm-card">
                 <div class="htm-img">
                     <img class="w-100" src="img/how-3.jpg" alt="">
                     <h6 class="step pl-4 pt-1 brown-3 ">
@@ -870,7 +871,7 @@
                     </div>
                 </div>
             </div>
-            <div class="htm-card">
+            <div id="htm-card4-js" class="htm-card">
                 <div class="htm-img">
                     <img class="w-100" src="img/how-4.png" alt="">
                     <h6 class="step brown-3 pl-4 pt-1">
@@ -1268,6 +1269,7 @@
                     opacity: 0,
                 })
             }
+
             // md-tcard-seaction-card-1
             if($(window).scrollTop() >= ($("#md-tcard-seaction-card-1").offset().top - $(window).height() )){
                 $("#md-tcard-seaction-card-1").css({
@@ -1281,6 +1283,7 @@
                     opacity: 0,
                 })
             }
+
             // md-tcard-seaction-card-2
             if($(window).scrollTop() >= ($("#md-tcard-seaction-card-2").offset().top - $(window).height() )){
                 $("#md-tcard-seaction-card-2").css({
@@ -1294,6 +1297,7 @@
                     opacity: 0,
                 })
             }
+
             // #md-tcard-section-card-3
             if($(window).scrollTop() >= ($("#md-tcard-seaction-card-3").offset().top - $(window).height() )){
                 $("#md-tcard-seaction-card-3").css({
@@ -1307,6 +1311,7 @@
                     opacity: 0,
                 })
             }
+
             // #md-tcard-section-card-4
             if($(window).scrollTop() >= ($("#md-tcard-seaction-card-4").offset().top - $(window).height() )){
                 $("#md-tcard-seaction-card-4").css({
@@ -1318,6 +1323,83 @@
                 $("#md-tcard-seaction-card-4").css({
                     transform:"translateY(100px)",
                     opacity: 0,
+                })
+            }
+            //-- nav-how-to-mack--
+            if($(window).scrollTop() >= ($("#nav-how-to-mack").offset().top - $(window).height() ) ){
+                $("#nav-how-to-mack").css({
+                    transform: "translateY(0px)",
+                    opacity:1,
+                })
+            }
+
+            else{
+                $("#nav-how-to-mack").css({
+                    transform: "translateY(100px)",
+                    opacity:1,
+                })
+            }
+            // #htm-card1-js
+            if($(window).scrollTop() >= ($("#htm-card1-js").offset().top - $(window).height() ) ){
+                $("#htm-card1-js").css({
+                    transform: "translateY(0px)",
+                    opacity:1,
+                })
+            }
+
+            else{
+                $("#htm-card1-js").css({
+                    transform: "translateY(100px)",
+                    opacity:1,
+                })
+            }
+            
+            // #htm-card2-js
+            if($(window).scrollTop() >= ($("#htm-card2-js").offset().top - $(window).height() ) ){
+                $("#htm-card2-js").css({
+                    transform: "translateY(0px)",
+                    opacity:1,
+                })
+            }
+
+            else{
+                $("#htm-card2-js").css({
+                    transform: "translateY(100px)",
+                    opacity:1,
+                })
+            }
+            // #htm-card3-js
+            if($(window).scrollTop() >= ($("#htm-card3-js").offset().top - $(window).height() ) ){
+                $("#htm-card3-js").css({
+                    transform: "translateY(0px)",
+                    opacity:1,
+                })
+            }
+
+            else{
+                $("#htm-card3-js").css({
+                    transform: "translateY(100px)",
+                    opacity:1,
+                })
+            }
+            // #htm-card4-js
+            if($(window).scrollTop() >= ($("#htm-card4-js").offset().top - $(window).height() ) ){
+                $("#htm-card4-js").css({
+                    transform: "translateY(0px)",
+                    opacity:1,
+                })
+            }
+
+            else{
+                $("#htm-card4-js").css({
+                    transform: "translateY(100px)",
+                    opacity:1,
+                })
+            }
+            // --media how to make --
+            if($(window).scrollTop() >= ($(".media-how-to-make-img").offset().top - $(window).height() ) ){
+                $(".media-how-to-make-img").css({
+                    opacity:1,
                 })
             }
             // --media how to make --

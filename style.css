@@ -131,7 +131,7 @@
         }
         @media screen and (min-width:376px) {
             .main-bg{
-                margin-top: 300px;
+                margin-top: 250px;
                 height:550px;
                 padding-top: 5rem;
             }
@@ -890,6 +890,11 @@
         overflow: hidden;
     }
     /* ------------ how to make ------ */
+    #nav-how-to-mack{
+        transform: translateY(100px);
+        opacity: 0;
+        transition: 2s;
+    }
     .hot-to-make-titleimg{
         width: 100%;
         height: 220px;
@@ -960,6 +965,26 @@
         transition: 2s;
         opacity: 0.9;
         filter:drop-shadow(2px 2px 7px #50391669);
+    }
+    #htm-card1-js{
+        transform: translateY(100px);
+        opacity: 0;
+        transition: 2s;
+    }
+    #htm-card2-js{
+        transform: translateY(100px);
+        opacity: 0;
+        transition: 2s;
+    }
+    #htm-card3-js{
+        transform: translateY(100px);
+        opacity: 0;
+        transition: 2s;
+    }
+    #htm-card4-js{
+        transform: translateY(100px);
+        opacity: 0;
+        transition: 2s;
     }
     .htm-card{
         position: relative;
