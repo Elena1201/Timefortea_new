@@ -84,20 +84,39 @@
             margin: 0 10px;
 
         }
-
+    /*---media-header-------  */
         .media-header-img{
+            position: relative;
             width:100%;
             height: 286px;
-            background-image: url(img/img-1-iphone.png);
+            background-image: url(img/img-1-iphone\ \(2\).png);
             background-repeat: no-repeat;
-            background-position: center;        
+            background-position: center;  
         }
-
         .media-header{
             margin-top: 40%;
         }
+        .md-leaf{
+            width:100px;
+            /* border: 1px solid #000000; */
+            position: absolute;
+            right: 7%;
+            top: 53%;
+            animation: md-leafmove 4s infinite;
+        }
+        @keyframes md-leafmove {
+            0%{
+                transform: rotate(-5deg);
+            }
+            50%{
+                transform: translateY(30px) rotate(10deg);
+            }
+            100%{
+                transform: rotate(-5deg);
+            }
+        }
     /*--------- main About-seaction------------ */
-        #About{
+    #About{
             transform: translateY(100px);
             opacity:0 ;
             transition: 2s;
@@ -106,7 +125,7 @@
         .main-bg{
             width: 100%;
             background-color: hsla(44, 50%, 58%, 0.158);
-            box-shadow: 5px 5px 5px 5px #a7a88d37;
+            box-shadow: 2px 2px 90px 20px #55320b26;
             /* transform: translatey(100px); */
             /* transition: 3s; */
         }
@@ -164,7 +183,7 @@
 
         @media screen and (max-width:376px){
             .history{
-                margin-top: 20%;
+                /* margin-top: 20%; */
                 /* transform: translate(200px); */
                 opacity: 0;
                 transition: 2s;
@@ -231,7 +250,7 @@
 
         /* ----------manufacture section--------- */
         .manufacture-info{
-            margin: 7% 0 0 0;
+            margin: 9% 0 0 0;
             width: 100%;
             height: 1300px;
             background-image: url(img/background3.jpg);
@@ -273,7 +292,7 @@
             height:220px ;
             border-radius: 50%;
             overflow: hidden;
-            filter:drop-shadow(2px 2px 7px #503916);
+            filter:drop-shadow(2px 2px 10px #5a3d0ece);
         }
         .img-card-div{
             width: 180px;
@@ -561,7 +580,7 @@
         transform: translateY(100%) rotateX(90deg);
     }
     .tcard-seaction .tea-card:hover .face2{
-        transform: translateY(0%) rotateX(0deg) translateZ(100px);
+        transform: translateY(0%) rotateX(0deg) ;
     }
     /* -----media tea presentation------ */
     .media-tea-presentation{
@@ -570,7 +589,7 @@
         margin-top: 50px;
         width: 100%;
         position: relative;
-        
+        background-attachment: fixed;
         /* background: url(img/毛玻璃背景3.png)center center / 100% no-repeat;
         
         /* background: linear-gradient(#fbcc97, #A7A88D); */
@@ -582,47 +601,94 @@
             position: absolute;
             background-attachment: fixed;
         }
-        .c-1{
+        .c-1-top{
             position: absolute;
-            width: 100px;
+            z-index: 99;
+            width: 80px;
             height: 100px;
             border-radius: 50%;
-            transform: translate(18rem, 3rem);
+            transform: translate(19rem, -2rem) rotate(-30deg);
             background: linear-gradient(rgb(251, 204, 151), #A7A88D);
             filter: blur(10px);
             background-attachment: fixed;
-            animation: c-1move 2s infinite alternate;
+            animation: c-1move-top 3s infinite linear;
         }
-        @keyframes c-1move {
-            0% {
-                transform:translate(18rem, 3rem);
+        @keyframes c-1move-top {
+            0% , 100% {
+                transform:translate(19rem, -2rem) rotate(-30deg);
                 
             }
 
-            100% {
-                transform: translate(15rem, 0rem);
+            50% {
+                transform: translate(19.5rem, -2.5rem) rotate(-45deg);
+                
+            }
+        }
+        .c-2-top{
+            position: absolute;
+            z-index: 99;
+            width: 80px;
+            height: 100px;
+            border-radius: 50%;
+            transform: translate(-2rem, 30rem) rotate(-60deg);
+            background: linear-gradient(rgba(189, 104, 7, 0.653), #ebedc9ca);
+            filter: blur(10px);
+            background-attachment: fixed;
+            animation: c-2move-top 2s infinite linear;
+        }
+        @keyframes c-2move-top {
+            0% , 100% {
+                transform:translate(-2rem, 30rem) rotate(-30deg);
+                
+            }
+
+            50% {
+                transform: translate(-1.5rem, 29rem) rotate(-45deg);
+                
+            }
+        }
+        .c-3-top{
+            position: absolute;
+            z-index: 99;
+            width: 100px;
+            height: 80px;
+            border-radius: 50%;
+            transform: translate(20rem, 90rem) rotate(-60deg);
+            background: linear-gradient(rgba(13, 85, 11, 0.321), rgba(235, 237, 201, 0.702));
+            filter: blur(10px);
+            background-attachment: fixed;
+            animation: c-3move-top 5s infinite linear;
+        }
+        @keyframes c-3move-top {
+            0% , 100% {
+                transform:translate(20rem, 90rem) rotate(-60deg);
+                
+            }
+
+            50% {
+                transform: translate(19rem, 89rem) rotate(-55deg);
                 
             }
         }
         .c-2{
             position: absolute;
-            width: 650px;
-            height: 650px;
+            width: 750px;
+            height: 750px;
             border-radius: 50%;
-            transform: translate(-2rem, 25rem);
+            transform: translate(-1rem, 20rem);
             background: linear-gradient(rgba(138, 168, 142, 0.479), #c6baa3b0);
             filter: blur(5px);
             background-attachment: fixed;
-            animation: c-2move 3s infinite alternate;
+            animation: c-2move 10s infinite ease-in-out;
         }
         @keyframes c-2move {
-            0% {
-                transform: translate(-2rem, 25rem) ;
+            0% ,100% {
+                transform: translate(-1rem, 20rem) ;
                 
             }
 
-            100% {
-                transform:translate(1rem, 20rem) ;
+            50% {
+                transform:translate(3rem, 15rem) ;
                 
             }
         }
@@ -673,7 +739,7 @@
         .c-5{
             position: absolute;
             width: 350px;
-            height: 400px;
+            height: 450px;
             border-radius: 50%;
             transform: translate(-6rem, 111rem);
             background: linear-gradient(hsla(12, 41%, 73%, 0.49), rgba(179, 115, 4, 0.429));
@@ -721,16 +787,39 @@
     .media-tea-presentation-img{
         width: 100%;
         height: 165px;
-        background-image: url(img/img-5-iphone.png);
+        background-image: url(img/h-9.jpg);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
         overflow: hidden;
         object-fit: cover;
+        transform: translateY(100px);
+        opacity: 0;
+        transition: 2s;
     }
     .media-tea-presentation-img h4{
         padding-top: 0;
         transform: translateY(100%);
+    }
+    #md-tcard-seaction-card-1{
+        transform: translateY(100px);
+        opacity: 0;
+        transition: 2s;
+    }
+    #md-tcard-seaction-card-2{
+        transform: translateY(100px);
+        opacity: 0;
+        transition: 2s;
+    }
+    #md-tcard-seaction-card-3{
+        transform: translateY(100px);
+        opacity: 0;
+        transition: 2s;
+    }
+    #md-tcard-seaction-card-4{
+        transform: translateY(100px);
+        opacity: 0;
+        transition: 2s;
     }
     .md-tcard-seaction-card{
         margin-top: 40px;
@@ -1035,7 +1124,7 @@
     /*  */
     .md-footer-p{
         padding-top: 10px;
-        color: #ac9a7fb8;
+        color: #ac9a7f91;
     }
 
 

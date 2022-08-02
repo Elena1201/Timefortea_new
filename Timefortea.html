@@ -155,11 +155,16 @@
             <div class=" media-header container">
                 <div class="media-header-img mt-3 ">
                 </div>
+                <div class=" md-leaf d-block d-md-none">
+                    <img class="w-100" src="img/leaf-right.png" alt="">
+                </div>
                 <div class="title">
-                    <h5 class="text-center mx-4 brown-3 ">
-                        時光不逆流，深刻的瞬間砌成真實生活
+                    <h5 class="text-center font-weight-bolder mx-4 dark-color py-3">
+                        時光不逆流
+                        <br>
+                        深刻的瞬間砌成真實生活
                     </h5>
-                    <p class="text-center brown-3">
+                    <p class="text-center brown-3 px-4">
                         喝一杯單品茶的趣味無窮，山頭細心照料的葉菁，在土壤節氣的滋養下，經由絕佳的製茶工藝，成為手上這杯冷暖隨意的茶湯，產地、品種、發酵、烘焙、沖泡手法… 造就千變萬化的茶香滋味。
                     </p>
                 </div>
@@ -405,15 +410,17 @@
         </div>
     </div>
     <!----media manufacture -->
-    <div id="md-nav-manufacture" class="media-manufacture d-block d-md-none">
+    <div id="md-nav-manufacture" class="media-manufacture d-block d-md-none mt-5">
         <div class="media-manufacture-title media-manufacture-img">
             <div class="title container">
                 <h4 class="font-weight-bolder text-center light-color pt-4">
                     製茶過程
                 </h4>
-                <p class="font-weight-bolder text-center light-color">
+                <p class="font-weight-bolder text-center light-color px-3 pt-1">
                     台灣高山茶-好茶的生產流程
-                    靠著茶園、茶農、採茶工、及經驗老道的製茶師傅
+                    靠著茶園
+                    <br>
+                    茶農、採茶工、及經驗老道的製茶師傅
                     相互配合繁瑣的製茶程序來堅持茶葉品質
                 </p>
             </div>
@@ -662,9 +669,9 @@
             </div>
         </div> 
         <div class="circle">
-            <div class="c-1">
-                
-            </div>
+            <div class="c-1-top"></div>
+            <div class="c-2-top"></div>
+            <div class="c-3-top"></div>
             <div class="c-2"></div>
             <div class="c-3"></div>
             <div class="c-4"></div>
@@ -672,7 +679,7 @@
             <div class="c-6"></div>
         </div>
         <div class="md-tcard-seaction container d-block d-md-none position-absolute">
-            <div class="md-tcard-seaction-card px-3">
+            <div id="md-tcard-seaction-card-1" class="md-tcard-seaction-card px-3">
                 <div class=" md-tcard-seaction-img-1 ">
                 </div>
                 <div>
@@ -696,7 +703,7 @@
                     </p>
                 </div>
             </div>
-            <div class="md-tcard-seaction-card px-3">
+            <div id="md-tcard-seaction-card-2" class="md-tcard-seaction-card px-3">
                 <div class=" md-tcard-seaction-img-2 ">
                 </div>
                 <div>
@@ -720,7 +727,7 @@
                     </p>
                 </div>
             </div>
-            <div class="md-tcard-seaction-card px-3">
+            <div id="md-tcard-seaction-card-3" class="md-tcard-seaction-card px-3">
                 <div class=" md-tcard-seaction-img-3 ">
                 </div>
                 <div>
@@ -744,7 +751,7 @@
                     </p>
                 </div>
             </div>
-            <div class="md-tcard-seaction-card px-3">
+            <div id="md-tcard-seaction-card-4"  class="md-tcard-seaction-card px-3">
                 <div class=" md-tcard-seaction-img-4 ">
                 </div>
                 <div>
@@ -1030,9 +1037,10 @@
                         <img src="img/tw-iphone.png" alt="">
                     </div>
                 </div>
-                <p class="md-footer-p text-center">
+                <p class="md-footer-p text-center p-0 pt-4 ">
                     <small>
-                        © 2022 Time of TEA 及/或其關係企業。版權所有。隱私權政策 使用條款 條款及合約 公司遵法政策
+                        © 2022 Time of TEA 及其關係企業版權所有<br>
+                        隱私權政策 使用條款 條款及合約 公司遵法政策
                     </small>
                 </p>
             </div>
@@ -1059,7 +1067,7 @@
             
             console.log("scrollTop:" , $(window).scrollTop());
 
-            console.log("About offset().top:" , $("#About").offset().top);
+            console.log("main offset().top:" , $("main").offset().top);
 
             console.log(".manufacture-card-1 offset().top:" , $(".manufacture-card-1").offset().top);
             
@@ -1067,7 +1075,7 @@
 
 
             // "#About"
-            if($(window).scrollTop() >=  ($("#About").offset().top - $(window).height() *2/3 ) ){
+            if($(window).scrollTop() >=  ($("#About").offset().top - $(window).height() *1/2 ) ){
                 $("#About").css({
                     transform: "translatey(0px)",
                     opacity:1,
@@ -1216,6 +1224,7 @@
                     opacity: 0,
                 })
             }
+
             // .manufacture-title
             if($(window).scrollTop() >= 1800){
                 $(".manufacture-title").css({
@@ -1230,8 +1239,9 @@
                 opacity: 0,
                 })
             }
+
             // .media-manufacture-title
-            if ($(window).scrollTop()>= 1110){
+            if ($(window).scrollTop()>= 1400){
             $(".media-manufacture-title").css({
                 transform: 'translateY(0px)',
                 opacity: 1,
@@ -1245,6 +1255,71 @@
             })
             }
 
+            // media-tea-presentation-img
+            if($(window).scrollTop() >= ($(".media-tea-presentation-img").offset().top - $(window).height())){
+                $(".media-tea-presentation-img").css({
+                    transform:"translateY(0px)",
+                    opacity: 1,
+                })
+            }
+            else{
+                $(".media-tea-presentation-img").css({
+                    transform:"translateY(100px)",
+                    opacity: 0,
+                })
+            }
+            // md-tcard-seaction-card-1
+            if($(window).scrollTop() >= ($("#md-tcard-seaction-card-1").offset().top - $(window).height() )){
+                $("#md-tcard-seaction-card-1").css({
+                    transform:"translateY(0px)",
+                    opacity: 1,
+                })
+            }
+            else{
+                $("#md-tcard-seaction-card-1").css({
+                    transform:"translateY(100px)",
+                    opacity: 0,
+                })
+            }
+            // md-tcard-seaction-card-2
+            if($(window).scrollTop() >= ($("#md-tcard-seaction-card-2").offset().top - $(window).height() )){
+                $("#md-tcard-seaction-card-2").css({
+                    transform:"translateY(0px)",
+                    opacity: 1,
+                })
+            }
+            else{
+                $("#md-tcard-seaction-card-2").css({
+                    transform:"translateY(100px)",
+                    opacity: 0,
+                })
+            }
+            // #md-tcard-section-card-3
+            if($(window).scrollTop() >= ($("#md-tcard-seaction-card-3").offset().top - $(window).height() )){
+                $("#md-tcard-seaction-card-3").css({
+                    transform:"translateY(0px)",
+                    opacity: 1,
+                })
+            }
+            else{
+                $("#md-tcard-seaction-card-3").css({
+                    transform:"translateY(100px)",
+                    opacity: 0,
+                })
+            }
+            // #md-tcard-section-card-4
+            if($(window).scrollTop() >= ($("#md-tcard-seaction-card-4").offset().top - $(window).height() )){
+                $("#md-tcard-seaction-card-4").css({
+                    transform:"translateY(0px)",
+                    opacity: 1,
+                })
+            }
+            else{
+                $("#md-tcard-seaction-card-4").css({
+                    transform:"translateY(100px)",
+                    opacity: 0,
+                })
+            }
             // --media how to make --
             if($(window).scrollTop() >= ($(".media-how-to-make-img").offset().top - $(window).height() ) ){
                 $(".media-how-to-make-img").css({
@@ -1257,6 +1332,7 @@
                     opacity:0,
                 })
             }
+
             //.md-htm-card-1
             if($(window).scrollTop() >=  ($(".md-htm-card-1").offset().top - $(window).height() *1/2 ) ){
                 $(".md-htm-card-1").css({
@@ -1285,6 +1361,7 @@
                     opacity:0,
                 })
             }
+
             //.md-htm-card-3
             if($(window).scrollTop() >=  ($(".md-htm-card-3").offset().top - $(window).height() *1/2 ) ){
                 $(".md-htm-card-3").css({
@@ -1299,6 +1376,7 @@
                     opacity:0,
                 })
             }
+
             //.md-htm-card-4
             if($(window).scrollTop() >=  ($(".md-htm-card-4").offset().top - $(window).height() *1/2 ) ){
                 $(".md-htm-card-4").css({
