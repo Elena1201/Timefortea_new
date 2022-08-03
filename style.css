@@ -675,15 +675,15 @@
             width: 750px;
             height: 750px;
             border-radius: 50%;
-            transform: translate(-1rem, 20rem);
+            transform: translate(0rem, 10rem);
             background: linear-gradient(rgba(138, 168, 142, 0.479), #c6baa3b0);
-            filter: blur(5px);
+            filter: blur(2px);
             background-attachment: fixed;
             animation: c-2move 10s infinite ease-in-out;
         }
         @keyframes c-2move {
             0% ,100% {
-                transform: translate(-1rem, 20rem) ;
+                transform: translate(0rem, 10rem) ;
                 
             }
 
@@ -699,9 +699,9 @@
             border-radius: 50%;
             transform: translate(6rem, 55rem);
             background: linear-gradient(rgba(155, 124, 78, 0.418), rgba(73, 120, 98, 0.207));
-            filter: blur(40px);
+            filter: blur(10px);
             background-attachment: fixed;
-            animation: c-3move 3s infinite alternate;
+            animation: c-3move 5s infinite alternate;
         }
         @keyframes c-3move {
             0% {
@@ -721,9 +721,9 @@
             border-radius: 50%;
             transform: translate(0rem, 80rem);
             background: linear-gradient(hsla(35, 41%, 73%, 0.667), rgba(135, 145, 114, 0.473));
-            filter: blur(30px);
+            filter: blur(2px);
             background-attachment: fixed;
-            animation: c-4move 2s infinite alternate;
+            animation: c-4move 6s infinite alternate;
         }
         @keyframes c-4move {
             0% {
@@ -830,8 +830,8 @@
         height: 450px;
         border-radius: 30px;
         background: rgba(225, 225, 225, 0.1);
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
-        border: 1px solid rgba(225, 225, 225, 0.5);
+        box-shadow: 0px 10px 20px rgba(62, 35, 8, 0.15);
+        border: 1px solid rgba(225, 225, 225, 0.359);
         border-right: 1px solid (225, 225, 225, 0.2);
         border-bottom: 1px solid (225, 225, 225, 0.2);
         border-radius: 10px;
