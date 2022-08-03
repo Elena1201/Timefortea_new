@@ -416,9 +416,9 @@
         display: inline-block;
         
     }
-    /* ::-webkit-scrollbar{
+    ::-webkit-scrollbar{
         display: none;
-    } */
+    }
     .media-manufacture-card {
         min-height: 400px;
         text-align: center;
