@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+    <style>
+      /* .panel-title>a, .panel-title>a:active{
+            display:block;
+            text-transform:uppercase;
+        } */
+    </style>
+  </head>
+  <body>
+    <div class="container card mt-3">
+      <div class="form-group mt-3 mb-3">
+        <label class="radio">
+          <input
+            type="radio"
+            name="type"
+            value="domestic-credit"
+            id="pay-by-domestic-credit"
+            checked="checked"
+          />
+          信用卡
+        </label>
+        <label class="radio">
+          <input type="radio" name="type" value="atm" id="pay-by-atm" /> ATM
+          轉帳
+        </label>
+      </div>
+
+      <div id="domestic-credit-form" class="form">
+        <div class="text-center">
+          <h3>信用卡</h3>
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">信用卡卡號</span>
+          </div>
+          <input type="text" class="form-control" id="domestic-card-no" />
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">月</span>
+          </div>
+          <input
+            type="text"
+            class="form-control"
+            id="domestic-card-month"
+            placeholder="輸入月份"
+          />
+          <div class="input-group-prepend">
+            <span class="input-group-text">年</span>
+          </div>
+          <input
+            type="text"
+            class="form-control"
+            id="domestic-card-year"
+            placeholder="輸入年"
+          />
+          <div class="input-group-prepend">
+            <label class="input-group-text">末三碼</label>
+          </div>
+          <input
+            type="text"
+            class="form-control"
+            id="domestic-card-csv"
+            placeholder="輸入末三碼"
+          />
+        </div>
+        <div class="form-group">
+          <span style="color: #fc3762" id="domestic-card-error"></span>
+        </div>
+        <div class="form-group">
+          <button type="button" id="domestic-submmit" class="btn btn-primary">
+            確認送出
+          </button>
+        </div>
+      </div>
+
+      <div id="atm-form" style="display: none">
+        <div class="text-center">
+          <h3>使用ATM轉帳</h3>
+          <p>轉帳資訊，如下</p>
+          <p>XXXXXXXXXXXX</p>
+          <p>XXXXXXXXXXXX</p>
+          <p>XXXXXXXXXXXX</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <button type="button" id="resetForm" class="btn btn-warning">
+          重設
+        </button>
+      </div>
+    </div>
+
+    <script>
+      $('input[type=radio][name="type"]').on("change", function () {
+        switch ($(this).val()) {
+          case "domestic-credit":
+            $("#domestic-credit-form").show();
+            $("#aboard-credit-form").hide();
+            $("#atm-form").hide();
+            break;
+          case "aboard-credit":
+            $("#domestic-credit-form").hide();
+            $("#aboard-credit-form").show();
+            $("#atm-form").hide();
+            break;
+          case "atm":
+            $("#domestic-credit-form").hide();
+            $("#aboard-credit-form").hide();
+            $("#atm-form").show();
+            break;
+        }
+      });
+
+      $("#domestic-submmit").on("click", function (event) {
+        event.preventDefault();
+
+        let cardNo = $("#domestic-card-no").val();
+        let cardMonth = $("#domestic-card-month").val();
+        let cardYear = $("#domestic-card-year").val();
+        let cardCSV = $("#domestic-card-csv").val();
+
+        let errors = validateForm(cardNo, cardMonth, cardYear, cardCSV);
+        if (errors.length) {
+          $("#domestic-card-error").text(errors.join(","));
+          return;
+        }
+
+        blockForm("domestic", true);
+
+        // ajax event
+        // submitForm(cardNo, cardMonth, cardYear, cardCSV)
+      });
+
+      $("#aboard-submmit").on("click", function (event) {
+        event.preventDefault();
+
+        let cardNo = $("#aboard-card-no").val();
+        let cardMonth = $("#aboard-card-month").val();
+        let cardYear = $("#aboard-card-year").val();
+        let cardCSV = $("#aboard-card-csv").val();
+
+        let errors = validateForm(cardNo, cardMonth, cardYear, cardCSV);
+        if (errors.length) {
+          $("#aboard-card-error").text(errors.join(", "));
+          return;
+        }
+
+        blockForm("aboard", true);
+
+        // ajax event
+        // submitForm(cardNo, cardMonth, cardYear, cardCSV)
+      });
+
+      $("#resetForm").on("click", function (event) {
+        event.preventDefault();
+        blockForm("domestic", false);
+        blockForm("aboard", false);
+      });
+
+      function validateForm(no, month, year, csv) {
+        let errors = [];
+
+        if (no.split("").length !== 12) errors.push("invalid card number");
+        if (month.split("").length !== 2) errors.push("invalid card month");
+        if (year.split("").length !== 2) errors.push("invalid card year");
+        if (csv.split("").length !== 3) errors.push("invalid card csv");
+
+        return errors;
+      }
+
+      function blockForm(formType, isBlocking) {
+        $('input[type=radio][name="type"]:not(:checked)').attr(
+          "disabled",
+          isBlocking
+        );
+        $(`#${formType}-card-no`).prop("readonly", isBlocking);
+        $(`#${formType}-card-month`).prop("readonly", isBlocking);
+        $(`#${formType}-card-year`).prop("readonly", isBlocking);
+        $(`#${formType}-card-csv`).prop("readonly", isBlocking);
+        $(`#${formType}-card-error`).text("");
+      }
+
+      function submitForm(no, month, year, csv) {
+        // $('input[type=radio][name="type"]':not(:checked)').attr("disabled", true)
+      }
+
+
+
+
+
+      //-------Radio input
+        function enhancedRadio() {
+            var r = document.forms[0].elements[this.name];
+            for (var i = 0; i < r.length; i++) {
+            if (r[i].index != this.index) r[i].isChecked = false;
+            }
+            this.isChecked = !this.isChecked;
+            this.checked = this.isChecked;
+        }
+        function deployRadioEvent() {
+            var f = document.forms[0];
+            for (var i = 0; i < f.elements.length; i++) {
+            var e = f.elements[i];
+            if (e.type == "radio") {
+                e.onclick = enhancedRadio;
+                e.setAttribute("isChecked", false);
+                e.setAttribute("index", i);
+            }
+            }
+        }
+        deployRadioEvent();
+    </script>
+</body>
+</html>
